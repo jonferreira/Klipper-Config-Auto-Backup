@@ -44,3 +44,29 @@ crontab -e
 * * * * * /home/pi/klipper_config_bk.cron
 
 ########## save and exit ############
+
+
+######### update 2023 ###############
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+Copy the contents of the to your SSH keys to your GitHub account settings (https://github.com/settings/keys).
+
+Test the SSH key:
+
+ssh -T git@github.com
+
+Now try editing a file (try the README) and then do:
+
+git add -A
+git commit -am "Update README.md"
+git push
+Add the key to the ssh-agent
+
+ssh-add ~/.ssh/id_rsa
+
+# source https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278
+
+#init
+
+git clone git@github.com:jonferreira/BLV-Klipper config
