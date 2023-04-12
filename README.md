@@ -8,7 +8,10 @@ cd ~/klipper_config/
 
 git init
 
-git remote add origin <Your-GitHub-Repo-URL>
+git config --global user.email "email"
+git config --global user.name "name"
+
+git remote add origin Your-GitHub-Repo-URL
 
 git add .
 
